@@ -1,0 +1,27 @@
+		#msg {
+			border: 1px solid red;
+			background-color: #32d;
+			width: 200px;
+			height: 200px;
+			color: #fff;
+			position: relative;
+		}
+		
+		#msg .box {
+			position: absolute;
+			left: 10px;
+			top : 10px;
+		}
+		
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: gray;
+			border: 1px solid red;
+			color: #FFF;
+		}
+		
+		p {
+			background-color: red;
+			color: blue;
+		}
