@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="test.css"/>
 </head>
 <body>
-<div id="container"></div>
+<div id="container" ></div>
  
 <!-- 콜리 스크립트 로딩 -->
 <script type="text/javascript" src="http://jindo.dev.naver.com/collie/deploy/collie.min.js"></script>
@@ -14,87 +14,85 @@
 // logo.png 이미지를 로딩한다
 collie.ImageManager.addImages({
     "logo" : "http://jindo.dev.naver.com/collie/img/small/logo.png",
-    "walking": "http://fc00.deviantart.net/fs71/f/2011/227/e/0/ubira_walking_sprite_by_illeander-d46nb8d.png",
+    "walking": "walking.png",
 	"soldier" : "soldier.png"
 });
  
 // 레이어를 만든다
 var layer = new collie.Layer({
-    width : 640,
-    height : 480 * 2
+    width : window.innerWidth - 20,
+    height : window.innerHeight - 20
 });
-
 var man = new collie.MovableObject({
 	width: 32,
 	height: 48,
 	spriteX : 32,
 	spriteY : 48,
 	spriteLength: 16,
-	velocityX : 10,
-	friction : 0.05,  // 마찰력
+	velocityX : 0,
+	friction : 0,  // 마찰력
 	backgroundImage : "walking"
 }).addTo(layer);
 
-var oCtrlDown = collie.Timer.cycle(man, "12fps", {
-	from : 0,
-	to : 3
-});
-oCtrlDown.stop();
-var oCtrlUp = collie.Timer.cycle(man, "12fps", {
-	from : 12,
-	to : 15
-});
-oCtrlUp.stop();
-var oCtrlRight = collie.Timer.cycle(man, "12fps", {
-	from : 8,
-	to : 11
-});
-//oCtrlRight.stop();
-var oCtrlLeft = collie.Timer.cycle(man, "12fps", {
-	from : 4,
-	to : 7
-});
-oCtrlLeft.stop();
+var oCtrl = {
+	_dir : {
+		'up' 	: collie.Timer.cycle(man, "8fps", {from : 12, to : 15 }),
+		'right' : collie.Timer.cycle(man, "8fps", {from : 8, to : 11 }),
+		'down' 	: collie.Timer.cycle(man, "8fps", {from : 0, to : 3 }),
+		'left' 	: collie.Timer.cycle(man, "8fps", {from : 4, to : 7 })
+	},
+	up : function(){
+		this.stop();
+		this._dir["up"].start();
+	},
+	right: function(){
+		this.stop();
+		this._dir["right"].start();
+	},
+	down : function(){
+		this.stop();
+		this._dir["down"].start();
+	},
+	left : function(){
+		this.stop();
+		this._dir["left"].start();
+	},
+	stop : function(){
+		for(var i in this._dir ){
+			this._dir[i].stop();
+		}
+	}
+};
+oCtrl.stop();
 
 document.onkeydown = function(evt){
+	var x = man.get("x");
+	var y = man.get("y");
+	
 	switch(evt.keyCode){
 		case 37: // left
-			oCtrlLeft.start();
-			oCtrlRight.stop();
-			oCtrlUp.stop();
-			oCtrlDown.stop();
-			var x = man.get("x");
-			man.set("x", x-5); 
+			man.set("velocityX", -1); 
+			oCtrl.left();
 		break;
 		case 38: // up
-			oCtrlLeft.stop();
-			oCtrlRight.stop();
-			oCtrlUp.start();
-			oCtrlDown.stop();
-			
-			var x = man.get("y");
-			man.set("y", x-5); 
+			man.set("velocityY", -1);
+			oCtrl.up();
 			break;
 		case 39: // right
-			oCtrlLeft.stop();
-			oCtrlRight.start();
-			oCtrlUp.stop();
-			oCtrlDown.stop();
-			
-			var x = man.get("x");
-			man.set("x", x+5); 
-			
+			man.set("velocityX", 1); 
+			oCtrl.right();
 		break;
 		case 40: // down
-			oCtrlLeft.stop();
-			oCtrlRight.stop();
-			oCtrlUp.stop();
-			oCtrlDown.start();
-			
-			var x = man.get("y");
-			man.set("y", x+5); 
+			man.set("velocityY", 1);
+			oCtrl.down();
 		break;
 	}
+}
+
+document.onkeyup = function(evt){
+	oCtrl.stop();
+	man.set("velocityX", 0); 
+	man.set("velocityY", 0); 
 }
 
  
