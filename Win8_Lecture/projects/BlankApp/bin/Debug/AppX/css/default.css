@@ -1,0 +1,32 @@
+﻿body {
+}
+  #grid { 
+		height: 100%;
+		width: 100%;
+		position: relative;
+        display: -ms-grid;
+        -ms-grid-columns: 80px 1fr;
+        -ms-grid-rows: 40px 1fr 30px;
+    }
+
+    #title    { -ms-grid-column: 1; -ms-grid-row: 1 }
+    #score    { -ms-grid-column: 1; -ms-grid-row: 3 }
+    #stats    { -ms-grid-column: 1; -ms-grid-row: 2; }
+    #board    { -ms-grid-column: 2; -ms-grid-row: 1; -ms-grid-row-span: 2; }
+    #controls { -ms-grid-column: 2; -ms-grid-row: 3 }
+	
+	#grid div {
+		border: 1px solid black;
+	}
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+}
+
+@media screen and (-ms-view-state: filled) {
+}
+
+@media screen and (-ms-view-state: snapped) {
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+}

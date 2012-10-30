@@ -1,0 +1,13 @@
+c:\users\mic\documents\visual studio 2012\Projects\BlankApp\BlankApp\bin\Debug\resources.pri
+c:\users\mic\documents\visual studio 2012\Projects\BlankApp\BlankApp\bin\Debug\AppxManifest.xml
+c:\users\mic\documents\visual studio 2012\Projects\BlankApp\BlankApp\bin\Debug\BlankApp.build.appxrecipe
+c:\users\mic\documents\visual studio 2012\Projects\BlankApp\BlankApp\bld\Debug\priconfig.xml
+c:\users\mic\documents\visual studio 2012\Projects\BlankApp\BlankApp\bld\Debug\layout.resfiles
+c:\users\mic\documents\visual studio 2012\Projects\BlankApp\BlankApp\bld\Debug\resources.resfiles
+c:\users\mic\documents\visual studio 2012\Projects\BlankApp\BlankApp\bld\Debug\pri.resfiles
+c:\users\mic\documents\visual studio 2012\Projects\BlankApp\BlankApp\bld\Debug\LanguageQualifiers.txt
+c:\users\mic\documents\visual studio 2012\Projects\BlankApp\BlankApp\bld\Debug\ProjectArchitectures.txt
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\bld\Debug\priconfig.xml.intermediate
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\bld\Debug\layout.resfiles.intermediate
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\bld\Debug\resources.resfiles.intermediate
+C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\bld\Debug\pri.resfiles.intermediate
