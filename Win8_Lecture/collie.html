@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="test.css"/>
 </head>
 <body>
-<div id="container" ></div>
+<div id="container" style="border: 1px solid #222;" ></div>
  
 <!-- 콜리 스크립트 로딩 -->
 <script type="text/javascript" src="http://jindo.dev.naver.com/collie/deploy/collie.min.js"></script>
@@ -15,7 +15,8 @@
 collie.ImageManager.addImages({
     "logo" : "http://jindo.dev.naver.com/collie/img/small/logo.png",
     "walking": "walking.png",
-	"soldier" : "soldier.png"
+	"soldier" : "soldier.png",
+	"boom"	: "explosion.png"
 });
  
 // 레이어를 만든다
@@ -33,6 +34,45 @@ var man = new collie.MovableObject({
 	friction : 0.02,  // 마찰력
 	backgroundImage : "walking"
 }).addTo(layer);
+
+
+var boom = new collie.DisplayObject({
+	width: 64,
+	height: 64,
+	spriteX : 256/4,
+	spriteY : 256/4,
+	spriteLength: 16,
+	backgroundImage : "boom",
+	visible : false
+}).addTo(layer);
+
+boomEffect = collie.Timer.cycle(boom, "24fps", {
+	from : 0,
+	to : 15,
+	loop: 1
+});
+boomEffect.stop();
+
+// 화면 4방으로 캐릭터가 나가는지 검사
+collie.Timer.repeat(function(){
+	console.log("111");
+	if( man.get("x") < -32 ){
+		man.set("x", window.innerWidth - 20);
+	}
+	
+	if( man.get("x") > window.innerWidth - 20){
+		man.set("x",0);
+	}
+	
+	if( man.get("y") < -48 ){
+		man.set("y", window.innerHeight - 20);
+	}
+	
+	if( man.get("y") > window.innerHeight - 20){
+		man.set("y", 0);
+	}
+	
+}, 20);
 
 var oCtrl = {
 	_dir : {
@@ -69,6 +109,7 @@ document.onkeydown = function(evt){
 	var x = man.get("velocityX");
 	var y = man.get("velocityY");
 	
+	
 	switch(evt.keyCode){
 		case 37: // left
 			man.set("velocityX", x-1); 
@@ -86,6 +127,11 @@ document.onkeydown = function(evt){
 			man.set("velocityY", y+1);
 			oCtrl.down();
 		break;
+		case 13: // enter
+			boom.set("visible", true);
+			boomEffect.start();
+		default: 
+			console.log("누른 키값: ", evt.keyCode);
 	}
 }
 
