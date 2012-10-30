@@ -64,6 +64,7 @@
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
     <Content Include="js\game.js" />
+    <Content Include="js\point.js" />
     <None Include="BlankApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

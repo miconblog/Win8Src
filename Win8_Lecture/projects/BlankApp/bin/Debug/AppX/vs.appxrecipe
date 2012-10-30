@@ -5,7 +5,7 @@
     <WindowsUser>Mic</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>1265035FE46130A8DE9B0CF39DF96A5995564CFABBFBA41F63827B4AC327D27B</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>2DC895950C599D5C7B879176C453081123EC242AE2CA391519D1C018399A1CFB</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c4208bdc-a7f4-4415-ac52-9659d20f11c1_1.0.0.0_neutral__465f9g7n0ax0w</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c4208bdc-a7f4-4415-ac52-9659d20f11c1_465f9g7n0ax0w!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c4208bdc-a7f4-4415-ac52-9659d20f11c1</RegisteredPackageID>
@@ -16,13 +16,13 @@
     <AppXManifest Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-10-30T02:06:09.446</Modified>
+      <Modified>2012-10-30T05:30:48.242</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2012-10-30T02:04:55.158</Modified>
+      <Modified>2012-10-30T06:18:37.526</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\images\arrow-sprite.png">
       <PackagePath>images\arrow-sprite.png</PackagePath>
@@ -30,7 +30,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2012-07-26T02:30:08.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\images\smalllogo.png">
@@ -58,19 +57,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2012-10-30T02:04:25.383</Modified>
+      <Modified>2012-10-30T06:24:15.205</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\js\game.js">
       <PackagePath>js\game.js</PackagePath>
-      <Modified>2012-10-30T02:26:16.809</Modified>
+      <Modified>2012-10-30T05:26:11.993</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\js\point.js">
+      <PackagePath>js\point.js</PackagePath>
+      <Modified>2012-10-30T06:19:16.967</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2012-10-28T13:40:15.157</Modified>
+      <Modified>2012-10-30T05:03:16.486</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-10-30T02:06:09.099</Modified>
+      <Modified>2012-10-30T05:30:47.743</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

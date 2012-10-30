@@ -21,7 +21,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\images\smalllogo.png">
       <PackagePath>images\smalllogo.png</PackagePath>
@@ -46,6 +45,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\js\game.js">
       <PackagePath>js\game.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\js\point.js">
+      <PackagePath>js\point.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mic\Documents\Visual Studio 2012\Projects\BlankApp\BlankApp\css\default.css">
       <PackagePath>css\default.css</PackagePath>

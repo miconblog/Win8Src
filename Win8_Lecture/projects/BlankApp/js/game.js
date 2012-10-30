@@ -1,9 +1,9 @@
 ﻿var GameStart = function () {
     // logo.png 이미지를 로딩한다
     collie.ImageManager.addImages({
-        "logo": "http://jindo.dev.naver.com/collie/img/small/logo.png",
+      //  "logo": "http://jindo.dev.naver.com/collie/img/small/logo.png",
         "walking": "images/walking.png",
-        "soldier": "soldier.png",
+      //  "soldier": "soldier.png",
         "buttons": "images/arrow-sprite.png"
     });
 

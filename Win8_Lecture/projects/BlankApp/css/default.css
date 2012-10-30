@@ -5,8 +5,8 @@
 		width: 100%;
 		position: relative;
         display: -ms-grid;
-        -ms-grid-columns: 80px 1fr;
-        -ms-grid-rows: 40px 1fr 30px;
+        -ms-grid-columns: 200px 1fr;
+        -ms-grid-rows: 100px 1fr 100px;
     }
 
     #title    { -ms-grid-column: 1; -ms-grid-row: 1 }

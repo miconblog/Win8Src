@@ -14,16 +14,21 @@
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/js/collie.js"></script>
     <script src="/js/game.js"></script>
+    <script src="/js/point.js"></script>
     <script src="/js/default.js"></script>
 </head>
 <body>
     <div id="grid">
         <div id="title">Game Title</div>
         <div id="score">Score</div>
-        <div id="stats">Stats</div>
+        <div id="stats" data-win-control="WinJS.UI.ListView">Stats</div>
         <div id="board">Board</div>
         <div id="controls">Controls</div>
     </div>
+    <div id="tpl">
+        <li data-win-bind="innerHTML:point"></li>
+    </div>
+
     <div id="appbar" data-win-control="WinJS.UI.AppBar">
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'brag', label:'Brag', icon:'emoji2', section:'selection', type:'flyout', flyout:'bragFlyout'}"></button>
     </div>

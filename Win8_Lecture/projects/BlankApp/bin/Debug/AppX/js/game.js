@@ -1,9 +1,9 @@
 ﻿var GameStart = function () {
     // logo.png 이미지를 로딩한다
     collie.ImageManager.addImages({
-        "logo": "http://jindo.dev.naver.com/collie/img/small/logo.png",
+      //  "logo": "http://jindo.dev.naver.com/collie/img/small/logo.png",
         "walking": "images/walking.png",
-        "soldier": "soldier.png",
+      //  "soldier": "soldier.png",
         "buttons": "images/arrow-sprite.png"
     });
 
@@ -31,14 +31,17 @@
 
 
     // 버튼 추가
-    var buttonUp = new collie.DisplayObject({
+    var buttonLeft = new collie.DisplayObject({
         x : 0,
-        y : 300,
+        y: 300,
         width: 48,
         height: 48,
+        spriteX: 0,
+        spriteY: 0,
+        spriteLength: 1,
         backgroundImage: "buttons"
     }).addTo(layer2);
-    buttonUp.attach({
+    buttonLeft.attach({
         "click": function () {
 
             var x = man.get("velocityX");
@@ -47,37 +50,69 @@
             man.set("velocityX", x - 1);
             oCtrl.left();
         }
-    })
+    });
 
     var buttonDown = new collie.DisplayObject({
+        x: 48,
+        y: 348,
+        width: 48,
+        height: 48,
+        spriteX: 48,
+        spriteY: 48,
+        spriteLength: 1,
+        backgroundImage: "buttons"
+    }).addTo(layer2);
+    buttonDown.attach({
+        "click": function () {
+
+            var x = man.get("velocityX");
+            var y = man.get("velocityY");
+
+            man.set("velocityY", y + 1);
+            oCtrl.down();
+        }
+    });
+
+    var buttonUp = new collie.DisplayObject({
         x: 48,
         y: 300,
         width: 48,
         height: 48,
+        spriteX: 0,
+        spriteY: 48,
+        spriteLength : 1,
         backgroundImage: "buttons"
     }).addTo(layer2);
-    var buttonLeft = new collie.DisplayObject({
+    buttonUp.attach({
+        "click": function () {
+
+            var x = man.get("velocityX");
+            var y = man.get("velocityY");
+
+            man.set("velocityY", y - 1);
+            oCtrl.up();
+        }
+    })
+    var buttonRight = new collie.DisplayObject({
         x: 48 + 48,
         y: 300,
         width: 48,
         height: 48,
         spriteX: 48,
-        spriteY: 48,
-        spriteLength: 4,
+        spriteY: 0,
+        spriteLength: 1,
         backgroundImage: "buttons"
     }).addTo(layer2);
-    var buttonRight = new collie.DisplayObject({
-        x: 48 + 48 + 48,
-        y: 300,
-        width: 48,
-        height: 48,
-        spriteX: 48,
-        spriteY: 48,
-        spriteLength: 4,
-        backgroundImage: "buttons"
-    }).addTo(layer2);
+    buttonRight.attach({
+        "click": function () {
 
+            var x = man.get("velocityX");
+            var y = man.get("velocityY");
 
+            man.set("velocityX", x + 1);
+            oCtrl.right();
+        }
+    })
 
     var oCtrl = {
         _dir: {
