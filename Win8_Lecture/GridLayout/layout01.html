@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>GridLayout</title>
+<style type="text/css">
+	html, body, div {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
+	/*
+	#title {
+		width: 200px;
+		height: 100px;
+		background-color: #123;
+	}
+	#stats {
+		width: 200px;
+		height: 400px;
+		background-color: #234;
+	}
+	#score {
+		width : 200px;
+		height: 100px;
+		background-color: #443;
+	}
+	#board {
+		position: absolute;
+		height : 500px;
+		width : 400px;
+		left: 204px;
+		top : 1px;
+		background-color: #742;
+	}
+	#controls {
+		position: absolute;
+		left : 204px;
+		top : 500px;
+		width: 400px;
+		height: 100px;
+		background-color: #877;
+	}
+	*/
+	div{
+		color: #fff;
+	}
+	#grid {
+		display: -ms-grid;
+		width: 100%;
+		height: 100%;
+		-ms-grid-columns: 80px 1fr;
+        -ms-grid-rows: 40px 1fr 30px;
+	}
+	#title {
+		-ms-grid-column: 1; 
+		-ms-grid-row: 1;
+		background-color: #877;
+	}
+	#score {
+		-ms-grid-column: 1; 
+		-ms-grid-row: 3;
+		background-color: #627;
+	}
+	#stats {
+		-ms-grid-column: 1; 
+		-ms-grid-row: 2;
+		background-color: #17a;
+	}
+	#board {
+		-ms-grid-column: 2; 
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 2;
+		background-color: #257;
+	}
+	#controls {
+		-ms-grid-column: 2; 
+		-ms-grid-row: 3;
+		background-color: #316;
+	}
+	
+</style>
+</head>
+<body>
+<div id="grid">
+    <div id="title">Game Title</div>
+    <div id="stats">Stats</div>
+	<div id="score">Score</div>
+    <div id="board">Board</div>
+    <div id="controls">Controls</div>
+</div>
+</body>
+
+
+
+
+
+
+
+

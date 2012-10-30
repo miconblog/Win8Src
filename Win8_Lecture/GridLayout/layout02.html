@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>GridLayout</title>
+<style type="text/css">
+	html, body {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+	}
+
+
+    #grid { 
+		height: 100%;
+		width: 100%;
+		position: relative;
+        display: -ms-grid;
+        -ms-grid-columns: 80px 1fr;
+        -ms-grid-rows: 40px 1fr 30px;
+    }
+
+    #title    { -ms-grid-column: 1; -ms-grid-row: 1 }
+    #score    { -ms-grid-column: 1; -ms-grid-row: 3 }
+    #stats    { -ms-grid-column: 1; -ms-grid-row: 2; }
+    #board    { -ms-grid-column: 2; -ms-grid-row: 1; -ms-grid-row-span: 2; }
+    #controls { -ms-grid-column: 2; -ms-grid-row: 3 }
+	
+	#grid div {
+		border: 1px solid black;
+	}
+	
+	.box {
+		width: 50px;
+		height: 50px;
+		background-color: blue;
+	}
+</style>
+</head>
+<body>
+<div id="grid">
+    <div id="title">Game Title</div>
+    <div id="score">Score</div>
+    <div id="stats">Stats</div>
+    <div id="board">Board
+		<div class="box"></div>
+	</div>
+    <div id="controls">Controls</div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script><script type="text/javascript">
+	var jBoard = $("#board");
+	
+	/*
+	setInterval(function(){
+		var el = $('<div class="box">');
+		jBoard.append(el);
+	}, 1000);
+	*/
+
+	jBoard.delegate( ".box", "click", function(e){
+		$(this).fadeOut();
+	});
+	
+	
+</script>
+</body>

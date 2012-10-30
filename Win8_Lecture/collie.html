@@ -30,7 +30,7 @@ var man = new collie.MovableObject({
 	spriteY : 48,
 	spriteLength: 16,
 	velocityX : 0,
-	friction : 0,  // 마찰력
+	friction : 0.02,  // 마찰력
 	backgroundImage : "walking"
 }).addTo(layer);
 
@@ -66,33 +66,33 @@ var oCtrl = {
 oCtrl.stop();
 
 document.onkeydown = function(evt){
-	var x = man.get("x");
-	var y = man.get("y");
+	var x = man.get("velocityX");
+	var y = man.get("velocityY");
 	
 	switch(evt.keyCode){
 		case 37: // left
-			man.set("velocityX", -1); 
+			man.set("velocityX", x-1); 
 			oCtrl.left();
 		break;
 		case 38: // up
-			man.set("velocityY", -1);
+			man.set("velocityY", y-1);
 			oCtrl.up();
 			break;
 		case 39: // right
-			man.set("velocityX", 1); 
+			man.set("velocityX", x+1); 
 			oCtrl.right();
 		break;
 		case 40: // down
-			man.set("velocityY", 1);
+			man.set("velocityY", y+1);
 			oCtrl.down();
 		break;
 	}
 }
 
 document.onkeyup = function(evt){
-	oCtrl.stop();
-	man.set("velocityX", 0); 
-	man.set("velocityY", 0); 
+	//oCtrl.stop();
+	//man.set("velocityX", 0); 
+	//man.set("velocityY", 0); 
 }
 
  
