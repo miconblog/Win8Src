@@ -4,7 +4,7 @@
 	var nT = setInterval(function(){
 		//console.log(timer);
 		//var el = document.getElementById("timer");
-		var el = $("timer");
+		var el = $("#timer")[0];
 		el.innerHTML = "<div>" + timer + "</div>";
 		timer--;
 		
