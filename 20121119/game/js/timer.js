@@ -1,8 +1,4 @@
-﻿function $(id){
-	return document.getElementById(id);
-}
-
-(function (){
+﻿(function (){
 	var timer = 60;
 	
 	var nT = setInterval(function(){
