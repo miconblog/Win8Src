@@ -1,0 +1,29 @@
+html, body { padding: 0; margin: 0; }
+#wrap {
+	width: 800px;
+	height: 500px;
+	background-color: green;
+}
+#header {
+	position: relative;
+}
+#score {
+	left: 0px;
+	top: 0px;
+}
+#timer {
+	top: 0px;
+	right: 0px;
+}
+
+.box {
+	position: absolute;
+	width : 100px;
+	height: 100px;
+	border: 1px solid #fff;
+	padding: 0px;
+	margin: 0px;
+	background-color: blue;
+	color: #fff;
+	display: block;
+}
