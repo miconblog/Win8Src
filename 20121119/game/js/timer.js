@@ -10,6 +10,10 @@
 		
 		if( timer < 0 ){
 			clearInterval(nT);
+			if( nBoxTimer ) {
+				clearInterval(nBoxTimer);
+				nBoxTimer = null;
+			}
 			alert("Time Over");
 		}
 	}, 1000);

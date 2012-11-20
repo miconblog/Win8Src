@@ -8,8 +8,8 @@
 		
 		elBox.css({
 			"left": Math.floor(Math.random() * 10000) % 750,
-			"top" : Math.floor(Math.random() * 10000) % 350
-			//"background-color": aColor[Math.floor(Math.random() * 100) % 7]
+			"top" : Math.floor(Math.random() * 10000) % 350,
+			"background-position-y": ((Math.floor(Math.random() * 100) % 7) * -50) + "px"
 		}).fadeIn();
 		
 		elBox[0].onclick = function(){
@@ -19,7 +19,7 @@
 		
 	}
 	
-	setInterval( createBox, 500)
+	nBoxTimer = setInterval( createBox, 500)
 
 })()
 
