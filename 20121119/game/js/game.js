@@ -1,6 +1,9 @@
 ﻿(function(){
 
-	var timer = 10;		
+	var scoreModel = ScoreModel();
+	var scoreView = ScoreView(scoreModel);
 
+	
+	scoreModel.addPoint();
 })()
 

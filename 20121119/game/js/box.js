@@ -4,7 +4,19 @@
 	elCont.addEventListener("click", function(e){
 		if(e.srcElement.className === "balloon") {
 			
-			console.log("풍선 터트리기", jQuery(e.srcElement).fadeOut() );
+			var index = 0;
+			var nPopTimer = setInterval(function(){
+				index++;
+				jQuery(e.srcElement).css("background-position-x", -50 * index );
+
+				if( index > 4 ){
+					jQuery(e.srcElement).hide();
+					clearInterval(nPopTimer);
+				}
+			}, 10);
+			
+						
+			//console.log("풍선 터트리기", jQuery(e.srcElement).fadeOut() );
 		 
 		}
 	});
