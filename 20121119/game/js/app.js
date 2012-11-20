@@ -1,9 +1,7 @@
 ﻿(function(){
 
-	var scoreModel = ScoreModel();
+	scoreModel = ScoreModel();
 	var scoreView = ScoreView(scoreModel);
 
-	
-	scoreModel.addPoint();
 })()
 

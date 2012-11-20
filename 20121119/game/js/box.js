@@ -15,7 +15,8 @@
 				}
 			}, 10);
 			
-						
+			
+			scoreModel.addPoint();
 			//console.log("풍선 터트리기", jQuery(e.srcElement).fadeOut() );
 		 
 		}
