@@ -45,5 +45,6 @@ html, body { padding: 0; margin: 0; }
 	position: absolute;
 	width : 50px;
 	height: 50px;
-	background-color: #456245;
+	/*background-color: #456245;*/
+	background-image: url('../bolloon_stripe.png');
 }
