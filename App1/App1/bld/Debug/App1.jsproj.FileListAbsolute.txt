@@ -1,0 +1,13 @@
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bin\Debug\resources.pri
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bin\Debug\AppxManifest.xml
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bin\Debug\App1.build.appxrecipe
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bld\Debug\priconfig.xml.intermediate
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bld\Debug\layout.resfiles.intermediate
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bld\Debug\resources.resfiles.intermediate
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bld\Debug\pri.resfiles.intermediate
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bld\Debug\priconfig.xml
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bld\Debug\layout.resfiles
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bld\Debug\resources.resfiles
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bld\Debug\pri.resfiles
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bld\Debug\LanguageQualifiers.txt
+c:\users\user\documents\visual studio 2012\Projects\App1\App1\bld\Debug\ProjectArchitectures.txt
